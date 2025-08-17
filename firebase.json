@@ -11,7 +11,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "site": "fbgad"
   },
   "storage": {
     "rules": "storage.rules"

@@ -95,6 +95,24 @@ You will be prompted with some questions, if not specified below, just press Ent
 - ```File ./index.html already exists. Overwrite? N```
 - Enter your user/repository
 
+### Update your ```firebase.json```
+Add this to hosting (replace XXX with your own domain):
+```
+"site": "XXX"
+```
+It should look something like:
+```
+"hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "site": "fbgad"
+  },
+```
+
 ## Sources
 - [Firebase Google Auth Documentation](https://firebase.google.com/docs/auth/web/google-signin)
 - [Youtube - Firebase Google Authentication Tutorial](https://www.youtube.com/watch?v=Uhbn1KmiNbg)
