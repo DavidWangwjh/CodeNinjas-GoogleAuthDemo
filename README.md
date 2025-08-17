@@ -74,13 +74,26 @@
     - Replace the ```firebaseConfig``` in ```firebase.js``` with your own
 
 ## Deploy your app
+Run the following commands in your terminal:
 ```
 firebase login
-firebase init
-firebase deploy --only hosting:fbgad
 ```
-firebase.json
+```
+firebase init
+```
+Select the following:
+- Firestore
+- Hosting
+- Storage
+- Realtime Database
 
+You will be prompted with some questions, if not specified below, just press Enter.
+- Select ```Use an existing project```, then select your project
+- Select any us-west location
+- ```Configure as a single-page app (rewrite all urls to /index.html)? n```
+- ```Set up automatic builds and deploys with GitHub? Y```
+- Enter your user/repository
+- ``` Set up the workflow to run a build script before every deploy? Y```
 
 ## Sources
 - [Firebase Google Auth Documentation](https://firebase.google.com/docs/auth/web/google-signin)

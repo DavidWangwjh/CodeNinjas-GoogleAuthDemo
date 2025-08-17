@@ -3,12 +3,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAV5E-62HCydu85AGHZAxIfF5Sux4rbE48",
-    authDomain: "codeninjas-auth-demo.firebaseapp.com",
-    projectId: "codeninjas-auth-demo",
-    storageBucket: "codeninjas-auth-demo.firebasestorage.app",
-    messagingSenderId: "781068340605",
-    appId: "1:781068340605:web:e0abf65c2c173a127c5014"
+  apiKey: "AIzaSyABQWqB3P50-XZb_B9iiKxVQmUQ6EoAjeY",
+  authDomain: "fir-auth-demo-4991b.firebaseapp.com",
+  projectId: "fir-auth-demo-4991b",
+  storageBucket: "fir-auth-demo-4991b.firebasestorage.app",
+  messagingSenderId: "730737087341",
+  appId: "1:730737087341:web:6bc747f3b60034113e8064",
+  measurementId: "G-655H6FK694"
 };
 
 // Initialize Firebase
