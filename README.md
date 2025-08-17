@@ -90,10 +90,10 @@ Select the following:
 You will be prompted with some questions, if not specified below, just press Enter.
 - Select ```Use an existing project```, then select your project
 - Select any us-west location
+- ```What do you want to use as your public directory? .```
 - ```Configure as a single-page app (rewrite all urls to /index.html)? n```
-- ```Set up automatic builds and deploys with GitHub? Y```
+- ```File ./index.html already exists. Overwrite? N```
 - Enter your user/repository
-- ``` Set up the workflow to run a build script before every deploy? Y```
 
 ## Sources
 - [Firebase Google Auth Documentation](https://firebase.google.com/docs/auth/web/google-signin)
