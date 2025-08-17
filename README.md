@@ -6,26 +6,26 @@
     ```
     node -v
     ```
-    - you should see something like
+    - You should see something like
     ```
     v22.11.0
     ```
     - If you get an error, do the following:
-        - Press the Windows key, type environment variables, and open **Edit system environment variables**.
-        - Click **Environment Variables**.
-        - Under **System variables**, find **Path**, click **Edit**.
+        - Press the Windows key, type environment variables, and open **Edit system environment variables**
+        - Click **Environment Variables**
+        - Under **System variables**, find **Path**, click **Edit**
         - Click **New** to add ```C:\Program Files\nodejs\```
-        - Click **Ok**, then restart VS Code / Terminal.
+        - Click **Ok**, then restart VS Code
 3. Create a Firebase Project
     - Go to [Firebase](https://firebase.google.com/)
     - Click **Go to console** on the top right corner
     - Click **Create a Firebase project**
     - Enter your project name
-    - **Disable Google Analytics** for simplicity 
+    - Up to you to enable/disable Gemini and Google Analytics
 4. Create a web app on Firebase
     - Click on your project
     - Click on **Web </>**
-    - Give your app a nickname and check ✅ the set up Firebase Hosting option. Select **Create a new site** and enter your app's domain (the link that people use to go to your website) <br>![alt text](assets/demo/register-app.png)
+    - Give your app a nickname and check ✅ the set up Firebase Hosting option. Select **Create a new site** and enter your app's domain (the link that people use to go to your website)
     - Click **Register App** then click **next** -> **next** -> **Continue to console** to finish all the steps
 5. Run the following commands in your VSCode terminal<br>
     ```
@@ -56,8 +56,8 @@
 ## Set Up Firebase Google Authentication
 1. Go to your Firebase console
 2. Click **Project Overview** -> **Authetication** -> **Get started**
-3. Select Google -> toggle enable -> select you support email -> click **Save**
-4. Click **Settings** -> **Add domain** -> Enter **127.0.0.1** -> click **Add** 
+3. Select Google -> toggle **Enable** -> select you support email -> click **Save**
+4. Click **Settings** -> **Authorized domains** -> **Add domain** -> Enter **127.0.0.1** -> click **Add** 
 5. Go to **Project settings** -> **Your apps** -> **SDK setup and configuration**
     - Copy your **firebaseConfig**
     - e.g.
@@ -77,8 +77,10 @@
 ```
 firebase login
 firebase init
-firebase deploy
+firebase deploy --only hosting:fbgad
 ```
+firebase.json
+
 
 ## Sources
 - [Firebase Google Auth Documentation](https://firebase.google.com/docs/auth/web/google-signin)
