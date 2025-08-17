@@ -2,14 +2,15 @@
 
 ## Set Up Firebase
 1. Download Node.js [here](https://nodejs.org/en/download)
-2. Check node version in terminal
+2. Check node version in terminal, run:
     ```
     node -v
-
-    # you should see something like
+    ```
+    - you should see something like
+    ```
     v22.11.0
     ```
-    - If you get an error, do the following
+    - If you get an error, do the following:
         - Press the Windows key, type environment variables, and open **Edit system environment variables**.
         - Click **Environment Variables**.
         - Under **System variables**, find **Path**, click **Edit**.
