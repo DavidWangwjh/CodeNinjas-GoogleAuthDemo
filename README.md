@@ -1,4 +1,4 @@
-# CodeNinjas-GoogleAuthDemo
+# Firebase Google Authentication Demo
 
 ## Set Up Firebase
 1. Download Node.js [here](https://nodejs.org/en/download)
