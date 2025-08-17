@@ -20,7 +20,7 @@
     - Go to [Firebase](https://firebase.google.com/)
     - Click **Go to console** on the top right corner
     - Click **Create a Firebase project**
-    - Enter your project name
+    - Enter your project name and project id (will be used as your domain by default)
     - Up to you to enable/disable Gemini and Google Analytics
 4. Create a web app on Firebase
     - Click on your project
