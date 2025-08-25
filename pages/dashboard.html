@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../scripts/user.js" defer type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <script src="../scripts/user.js" defer type="module"></script>
+  <script src="../scripts/todo.js" defer type="module"></script>
 </head>
 <body>
-    <h1>You're now logged in as</h1>
-    <h2 id="user-name"></h2>
-    <h2 id="user-email"></h2>
-    <img id="user-profile-picture">
-    <br>
-    <button id="logout-btn">Log Out</button>
+  <main class="container">
+    <header class="row space-between v-center">
+      <div class="row v-center">
+        <img id="user-profile-picture" class="avatar" alt="Profile photo" />
+        <div>
+          <h2 id="user-name"></h2>
+          <p id="user-email" class="muted"></p>
+        </div>
+      </div>
+      <button id="logout-btn" class="btn btn-outline">Log Out</button>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">To-Do List</h2>
+
+      <!-- Create -->
+      <div class="row gap">
+        <input id="new-todo-input" type="text" placeholder="Add a new todo..." class="input flex-1" />
+        <button id="add-todo-btn" class="btn">Add</button>
+      </div>
+
+      <hr />
+
+      <!-- Read / Update / Delete -->
+      <ul id="todo-list" class="todo-list">
+        <!-- Filled dynamically -->
+      </ul>
+    </section>
+  </main>
 </body>
 </html>

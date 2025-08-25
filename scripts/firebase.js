@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -9,31 +10,34 @@ const firebaseConfig = {
   storageBucket: "fir-auth-demo-4991b.firebasestorage.app",
   messagingSenderId: "730737087341",
   appId: "1:730737087341:web:6bc747f3b60034113e8064",
-  measurementId: "G-655H6FK694"
+  measurementId: "G-655H6FK694",
+  // IMPORTANT for Realtime Database:
+  databaseURL: "https://fir-auth-demo-4991b-default-rtdb.firebaseio.com"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// Auth
 const auth = getAuth(app);
-auth.language = 'en'
+auth.language = 'en';
 const provider = new GoogleAuthProvider();
-const googleLogin = document.getElementById('google-login-btn');
 
+// Database
+const db = getDatabase(app);
+
+// Login button handler (if on index.html)
+const googleLogin = document.getElementById('google-login-btn');
 if (googleLogin) {
-    googleLogin.addEventListener("click", function(){
-        signInWithPopup(auth, provider)
-        .then((result) => {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            // The signed-in user info.
-            const user = result.user;
-            console.log(user);
-            window.location.href = "pages/dashboard.html"
-        }).catch((error) => {
-            // Handle Errors here.
-        });
-    })
+  googleLogin.addEventListener("click", async () => {
+    try {
+      await signInWithPopup(auth, provider);
+      window.location.href = "pages/dashboard.html";
+    } catch (error) {
+      console.error(error);
+      alert("Login failed. Please try again.");
+    }
+  });
 }
 
-export { app, auth };
+export { app, auth, db };
