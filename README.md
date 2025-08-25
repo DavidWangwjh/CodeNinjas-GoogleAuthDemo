@@ -10,7 +10,7 @@
     ```
     v22.11.0
     ```
-    - If you get an error, do the following:
+    - For Windows system, if you get an error, do the following:
         - Press the Windows key, type environment variables, and open **Edit system environment variables**
         - Click **Environment Variables**
         - Under **System variables**, find **Path**, click **Edit**
@@ -87,20 +87,20 @@ Select the following:
 - Storage
 - Realtime Database
 
-You will be prompted with some questions, if not specified below, just press Enter.
+You will be prompted with some questions, if not specified below, just press Enter to use the default settings.
 - Select ```Use an existing project```, then select your project
 - Select any us-west location
-- ```What do you want to use as your public directory? .```
-- ```Configure as a single-page app (rewrite all urls to /index.html)? n```
-- ```File ./index.html already exists. Overwrite? N```
-- Enter your user/repository
+- ```What do you want to use as your public directory?``` ```.```
+- ```Configure as a single-page app (rewrite all urls to /index.html)?``` ```n```
+- ```File ./index.html already exists. Overwrite?``` ```n```
+- Enter your user/repository (e.g. ```DavidWangwjh/Firebase-Google-Auth-Demo```)
 
 ### Update your ```firebase.json```
-Add this to hosting (replace XXX with your own domain):
+Add the following to hosting (replace XXX with your own domain):
 ```
 "site": "XXX"
 ```
-It should look something like:
+Then, it should look something like:
 ```
 "hosting": {
     "public": ".",
@@ -109,8 +109,27 @@ It should look something like:
       "**/.*",
       "**/node_modules/**"
     ],
-    "site": "fbgad"
+    "site": "XXX"
   },
+```
+
+### Update your ```package.json```
+Add the following:
+```
+"scripts": {
+    "build": "echo \"No build step required\""
+  }
+```
+Then, it should look like:
+```
+{
+  "scripts": {
+    "build": "echo \"No build step required\""
+  },
+  "dependencies": {
+    "firebase": "^12.1.0"
+  }
+}
 ```
 
 ## Sources
