@@ -132,6 +132,31 @@ Then, it should look like:
 }
 ```
 
+## Realtime-Database with CRUD operations
+### What is CRUD
+- Create
+- Read
+- Update
+- Delete
+
+### Set Up
+1. In Firebase Console → Build → Realtime Database → Rules, replace the entire file with the following:
+    ```
+    {
+      "rules": {
+        "users": {
+          "$uid": {
+            ".read": "$uid === auth.uid",
+            ".write": "$uid === auth.uid"
+          }
+        }
+      }
+    }
+    ```
+2. Look at [user.js](scripts/user.js) for user authentication code.
+3. Look at [todo.js](scripts/todo.js) for the example To-Do List CRUD operations code.
+4. Look at [dashboard.html](pages/dashboard.html) for the dashboard page UI code.
+
 ## Sources
 - [Firebase Google Auth Documentation](https://firebase.google.com/docs/auth/web/google-signin)
 - [Youtube - Firebase Google Authentication Tutorial](https://www.youtube.com/watch?v=Uhbn1KmiNbg)
