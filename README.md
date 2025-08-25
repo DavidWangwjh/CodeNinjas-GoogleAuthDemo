@@ -1,5 +1,7 @@
 # Firebase Google Authentication Demo
 
+see demo [here](https://fbgad.web.app)
+
 ## Set Up Firebase
 1. Download Node.js [here](https://nodejs.org/en/download)
 2. Check node version in terminal, run:
